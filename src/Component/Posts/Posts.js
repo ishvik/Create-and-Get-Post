@@ -6,7 +6,9 @@ import { fetchPost } from '../../redux/PostRedux/postAction';
 
 function Posts({posts,fetchPost}){
     useEffect(()=>{
-        fetchPost();
+        if(!posts.length){
+            fetchPost()
+        }
     },[])
 
     return(
