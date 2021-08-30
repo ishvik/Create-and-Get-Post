@@ -23,6 +23,8 @@ function Createpost({createPostSucees,posts}){
         }
         console.log(posts)
         createPostSucees(obj);
+        setTitle(" ");
+        setDesc(" ");
     }
 
     return(
