@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    place-items:center;
+}
+
+.main{
+    margin-top: 4%;
+    background-color: wheat;
+    width: 80vw;
+    height: 70vh;
+    padding: 2%;
+    border-radius: 30px;
+    box-shadow: 1px 1px 8px darkgrey;
+}
+
+.title{
+    width: 100%;
+    font-size: 22px;
+    text-align: left;
+    border-bottom: 1px solid black;
+    font-style: italic;
+}
+
+.title label{
+    font-size: 22px;
+}
+
+.content{
+    margin-top: 5%;
+    height: 80%;
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+    color: brown;
+}

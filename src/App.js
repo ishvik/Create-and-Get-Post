@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Component/Navbar/Navbar';
+import Posts from './Component/Posts/Posts';
+import Single from './Component/SinglePost/Single';
+import createPost from './Component/CreatePost/Createpost';
+import { connect } from 'react-redux';
+import { BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom"
 
-function App() {
+function App({current}) {
   return (
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <Switch>
+        <Route exact path="/" component={Posts}/>
+        <Route exact path="/create" component={createPost}/>
+        {!current ? (
+          <Redirect to="/"/>
+        ):(
+          <Route exact path="/post/:id" component={Single}/>
+        )}
+      </Switch>
     </div>
+    </Router>
   );
 }
 
-export default App;
+const mapStateToProps = (state)=>{
+  return{
+    current:state.currentPost
+  }
+}
+
+export default connect(mapStateToProps)(App);

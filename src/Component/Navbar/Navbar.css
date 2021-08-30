@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.main-container{
+    height: 8vh;
+    width: 100vw;
+    background-color: crimson;
+    color: wheat;
+    box-shadow:  5px 1px 8px black;
+}
+
+.heading h1{
+    float: left;
+    margin-left: 10%;
+    margin-top: 1%;
+    font-size: 40px;
+    font-style: italic;
+    color: wheat;
+}
+
+.heading:hover{
+    cursor: pointer;
+}
+
+.create h2{
+    float: right;
+    margin-right: 10%;
+    margin-top: 1.5%;
+    font-size: 22px;
+    color: wheat;
+}
+
+.create h2:hover{
+    cursor: pointer;
+}

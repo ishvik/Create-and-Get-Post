@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.postContainer{
+    margin-top: 5%;
+    height: 45vh;
+    width: 25vw;
+    font-size: 20px;
+    background-color: whitesmoke;
+    text-align: left;
+    border-radius: 15px;
+    box-shadow: 1px 1px 8px darkgrey;
+}
+
+.postTitle{
+    height: 70%;
+    width: 100%;
+    padding: 3%;
+}
+
+.postTitle h1{
+    border-bottom: 1px solid black;
+}
+
+.postTitle h3{
+    margin-top: 5%;
+    font-size: 20px;
+    color: crimson;
+    font-style: italic;
+}
+
+.view{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    height: 50px;
+    width: 30%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: crimson;
+    color: white;
+    border-radius: 15px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: brown;
+}
